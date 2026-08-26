@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import aboutPhoto from '../assets/pexels-yaroslav-shuraev-9632122.jpg';
+import { site } from '../data/site';
+---
+
+<section id="about" class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+	<div class="grid items-center gap-10 md:grid-cols-2">
+		<div class="relative">
+			<div class="absolute -left-4 -top-4 h-full w-full rounded-3xl bg-gradient-to-br from-amber-200 via-rose-200 to-purple-200"></div>
+			<Image
+				src={aboutPhoto}
+				alt="A husky enjoying a gentle brush-out at Katy's Pampered Paws"
+				width={700}
+				class="relative w-full rounded-3xl object-cover shadow-lg"
+			/>
+		</div>
+
+		<div>
+			<span class="text-sm font-bold uppercase tracking-wide text-teal-600">About Katy's Pampered Paws</span>
+			<h2 class="mt-2 font-display text-3xl font-bold text-slate-800 sm:text-4xl">Grooming with patience and care</h2>
+			<p class="mt-4 text-slate-600">
+				Katy's Pampered Paws is a local, one-on-one grooming service in {site.area} dedicated to making every
+				visit stress-free for your pet. From a quick bath and brush-out to a full breed-specific groom,
+				every appointment is handled with patience, gentle handling, and genuine love for animals.
+			</p>
+			<p class="mt-4 text-slate-600">
+				Poodles, doodles, cats, and every breed in between are welcome. Add-ons like de-shedding treatments,
+				nail grinding, and teeth brushing are available to keep your pet looking and feeling their best.
+			</p>
+			<div class="mt-6 flex flex-wrap gap-3">
+				<span class="rounded-full bg-teal-50 px-4 py-1.5 text-sm font-semibold text-teal-700">Dogs &amp; Cats</span>
+				<span class="rounded-full bg-purple-50 px-4 py-1.5 text-sm font-semibold text-purple-700">All Breeds</span>
+				<span class="rounded-full bg-amber-50 px-4 py-1.5 text-sm font-semibold text-amber-700">By Appointment</span>
+			</div>
+		</div>
+	</div>
+</section>
