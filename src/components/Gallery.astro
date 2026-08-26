@@ -2,16 +2,14 @@
 import { Image } from 'astro:assets';
 import puppy from '../assets/pexels-akshay-s-1243594686-30961613.jpg';
 import chihuahua from '../assets/pexels-brenocardosofotografia-8530860.jpg';
-import husky from '../assets/pexels-yaroslav-shuraev-9632122.jpg';
 
 const photos = [
 	{ src: puppy, alt: 'A fluffy freshly groomed pup getting a cuddle', accent: 'from-rose-300 to-amber-300' },
 	{ src: chihuahua, alt: 'A chihuahua in a colorful bow tie after grooming', accent: 'from-teal-300 to-purple-300' },
-	{ src: husky, alt: 'A husky getting a gentle brush-out', accent: 'from-purple-300 to-rose-300' },
 ];
 ---
 
-<div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
+<div class="mx-auto grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2">
 	{photos.map((photo) => (
 		<div class="group relative">
 			<div class={`absolute -inset-1.5 rounded-3xl bg-gradient-to-br ${photo.accent} opacity-0 blur transition group-hover:opacity-60`}></div>
