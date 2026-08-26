@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+import { site } from '../data/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-slate-100 bg-white py-10">
+	<div class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 text-center sm:flex-row sm:justify-between sm:text-left">
+		<a href="#top" class="flex items-center gap-3">
+			<Image src={logo} alt={site.name} width={40} height={40} class="h-10 w-10 rounded-full object-cover" />
+			<span class="font-display text-base font-semibold text-slate-800">{site.name}</span>
+		</a>
+
+		<div class="flex flex-col items-center gap-1 text-sm text-slate-500 sm:items-end">
+			<a href={site.phoneHref} class="font-semibold text-slate-600 hover:text-teal-600">{site.phone}</a>
+			<span>{site.area}</span>
+		</div>
+	</div>
+
+	<p class="mt-6 text-center text-xs text-slate-400">
+		&copy; {year} {site.name}. All rights reserved.
+	</p>
+</footer>
